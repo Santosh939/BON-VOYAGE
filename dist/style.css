@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Calibri, sans-serif;
+}
+
+.webpage {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/123.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.navbar {
+    height: 80px;
+    width: 100%;
+    padding: 10px 15px;
+    position: fixed;
+    
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    animation: slideDown 1s ease;
+}
+
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.fa-house {
+    color: #ff7f50;
+    font-size: 17px; 
+    margin-right: 8px; 
+}
+
+.navdiv ul li {
+    display: flex;
+    align-items: center;
+}
+.navdiv ul li i {
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+li a {
+    font-size: 18px;
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+li a:hover {
+    color: orange;
+    transform: scale(1.1);
+}
+
+.rounded-button {
+    border-radius: 20px;
+    padding: 8px 16px;
+    border: 2px solid orange;
+    background: transparent;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.rounded-button:hover {
+    background-color: orange;
+    color: white;
+}
+
+.content {
+    text-align: center;
+    color: white;
+    padding: 250px 20px;
+}
+
+.content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+.content p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: slideIn 2s forwards 0.5s;
+}
+
+.cta-button {
+    background-color: #ff7f50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    animation: bounce 2s infinite;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.cta-button a{
+    color: #ffffff;
+}
+.cta-button a:hover{
+    color: #ffffff;
+}
+
+.cta-button:hover {
+    background-color: #ff5733;
+    transform: scale(1.1);
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.log-in-form-container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/123.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 0.896);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.log-in-form-container form {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    animation: slideIn 1.2s ease-in-out;
+}
+
+form h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.box {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.box:focus {
+    border-color: #ff7f50;
+    box-shadow: 0 0 5px rgba(255, 127, 80, 0.5);
+    outline: none;
+}
+
+.button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff7f50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ff5733;
+    transform: scale(1.05);
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.options label {
+    font-size: 14px;
+}
+
+a {
+    color: #ff7f50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff5733;
+}
+
+.social-login {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-login p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: white;
+}
+
+.social-login button {
+    display: inline-block;
+    width: 10%; 
+    padding: 10px;
+    margin: 0 5px; 
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-align: center;
+}
+
+.social-button.google {
+    background-color: #db4437;
+}
+
+.social-button.google:hover {
+    background-color: #c23321;
+    transform: scale(1.05);
+}
+
+
+.social-button.facebook {
+    background-color: #4267B2;
+}
+
+.social-button.facebook:hover {
+    background-color: #365899;
+    transform: scale(1.05);
+}
+
+.social-button.twitter {
+    background-color: #1DA1F2;
+}
+
+.social-button.twitter:hover {
+    background-color: #0d95e8;
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.explorediv {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/123.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 50px 20px;
+}
+
+.explore{
+    padding: 50px 20px;
+    text-align: center;
+    
+}
+.explore h1 {
+    font-size: 72px;
+    margin-bottom: 30px;
+    color: #f9fafa;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    
+}
+
+.destination-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+}
+
+.destination-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.destination-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 15px 0;
+}
+
+.destination-card p {
+    font-size: 14px;
+    color: #666;
+    padding: 0 15px 20px;
+}
+
+.destination-card:hover {
+    transform: scale(1.05)}
+
+
