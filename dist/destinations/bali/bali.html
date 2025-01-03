@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bali</title>
+    <link rel="stylesheet" href="bali.css">
+    <link rel="icon" href="../airplane.png">
+</head>
+<body>
+    <div class="baliwebpage">
+        <header>
+            <a href="..\destinations.html" class="back-to-destinations">&larr; Back to Destinations</a>
+        </header>
+        <main>
+            <section class="destination-detail">
+                <h1>Welcome to Bali</h1>
+                <p>Bali, known as the Island of the Gods, is a tropical paradise offering lush landscapes, stunning beaches, and a rich cultural heritage.</p>
+            </section>
+
+            <section class="top-attractions">
+                <h2>Top Attractions in Bali</h2>
+                <div class="attractions-grid">
+                    <!-- Uluwatu Temple -->
+                    <div class="attraction-card" data-name="Uluwatu Temple">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="uluwatu-temple" alt="Uluwatu Temple">
+                        <h3>Uluwatu Temple</h3>
+                        <p>A cliffside temple offering breathtaking ocean views and traditional performances.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Tanah Lot -->
+                    <div class="attraction-card" data-name="Tanah Lot">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="tanah-lot" alt="Tanah Lot">
+                        <h3>Tanah Lot</h3>
+                        <p>An iconic sea temple located on a rock formation surrounded by crashing waves.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Seminyak Beach -->
+                    <div class="attraction-card" data-name="Seminyak Beach">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="seminyak-beach" alt="Seminyak Beach">
+                        <h3>Seminyak Beach</h3>
+                        <p>A luxurious beach known for vibrant nightlife and upscale resorts.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Ubud Monkey Forest -->
+                    <div class="attraction-card" data-name="Ubud Monkey Forest">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="ubud-monkey-forest" alt="Ubud Monkey Forest">
+                        <h3>Ubud Monkey Forest</h3>
+                        <p>A lush sanctuary home to hundreds of playful monkeys and ancient temples.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Tegallalang Rice Terraces -->
+                    <div class="attraction-card" data-name="Tegallalang Rice Terraces">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="tegallalang-rice-terraces" alt="Tegallalang Rice Terraces">
+                        <h3>Tegallalang Rice Terraces</h3>
+                        <p>Famous for their stunning emerald-green rice fields and picturesque views.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Nusa Penida -->
+                    <div class="attraction-card" data-name="Nusa Penida">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="nusa-penida" alt="Nusa Penida">
+                        <h3>Nusa Penida</h3>
+                        <p>A picturesque island known for its stunning beaches and dramatic cliffs.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+     
+     <div id="reviewModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Leave a Review for <span id="attraction-name"></span></h2>
+            <form id="review-form">
+                <label for="rating">Rating:</label>
+                <div id="rating-stars">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+                <br>
+                <label for="review-text">Review:</label>
+                <textarea id="review-text" rows="4" cols="50"></textarea>
+                <br>
+                <button type="submit">Submit Review</button>
+            </form>
+            <div id="guidance"></div>
+        </div>
+    </div>
+    
+
+    <script src="..\destination.js"></script>
+    <script src="..\wishlist_rating.js"></script>
+    <script src="bali.js"></script>
+</body>
+</html>

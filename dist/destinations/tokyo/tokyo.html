@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokyo</title>
+    <link rel="stylesheet" href="tokyo.css"> 
+    <link rel="icon" href="../airplane.png">
+</head>
+<body>
+    <div class="tokyowebpage">
+        <header>
+            <a href="..\destinations.html" class="back-to-destinations">&larr; Back to Destinations</a>
+        </header>
+        <main>
+            <section class="destination-detail">
+                <h1>Welcome to Tokyo</h1>
+                <p>Tokyo, a city where modern innovation meets ancient tradition, offers dazzling skyscrapers, delicious sushi, and cultural treasures. Explore the bustling streets of Shinjuku, visit ancient temples, and immerse yourself in the vibrant nightlife.</p>
+            </section>
+
+            <section class="top-attractions">
+                <h2>Top Attractions in Tokyo</h2>
+                <div class="attractions-grid">
+                    <!-- Tokyo Tower -->
+                    <div class="attraction-card" data-name="Tokyo Tower">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="tokyo-tower" alt="Tokyo Tower">
+                        <h3>Tokyo Tower</h3>
+                        <p>An iconic red-and-white landmark offering panoramic city views.</p>
+                        <!-- Rating Section -->
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Senso-ji Temple -->
+                    <div class="attraction-card" data-name="Senso-ji Temple">
+                        <span class="love-symbol">&#9829;</span>
+                        <img src="Senso-ji Temple.jpg" alt="Senso-ji Temple">
+                        <h3>Senso-ji Temple</h3>
+                        <p>Tokyo’s oldest temple, a symbol of Japanese culture and spirituality.</p>
+                        <!-- Rating Section -->
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Shibuya Crossing -->
+                    <div class="attraction-card" data-name="Shibuya Crossing">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="shibuya-crossing" alt="Shibuya Crossing">
+                        <h3>Shibuya Crossing</h3>
+                        <p>A world-famous pedestrian scramble in the heart of Tokyo’s urban jungle.</p>
+                        <!-- Rating Section -->
+                        
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <!-- Review Popup Modal -->
+<div id="reviewModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Leave a Review for <span id="attraction-name"></span></h2>
+        <form id="review-form">
+            <label for="rating">Rating:</label>
+            <div id="rating-stars">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <br>
+            <label for="review-text">Review:</label>
+            <textarea id="review-text" rows="4" cols="50"></textarea>
+            <br>
+            <button type="submit">Submit Review</button>
+        </form>
+        <div id="guidance"></div>
+    </div>
+</div>
+
+    <script src="..\destination.js"></script>
+    <script src="..\wishlist_rating.js"></script>
+    <script src="tokyo.js"></script>
+</body>
+</html>

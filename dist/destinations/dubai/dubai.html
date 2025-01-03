@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dubai</title>
+    <link rel="stylesheet" href="dubai.css">
+    <link rel="icon" href="../airplane.png">
+</head>
+<body>
+    <div class="dubaiwebpage">
+        <header>
+            <a href="..\destinations.html" class="back-to-destinations">&larr; Back to Destinations</a>
+        </header>
+        <main>
+            <section class="destination-detail">
+                <h1>Welcome to Dubai</h1>
+                <p>Dubai, a global city and luxury destination in the UAE, is renowned for its futuristic skyline, lavish lifestyle, and iconic landmarks. Explore the grandeur of this modern metropolis.</p>
+            </section>
+
+            <section class="top-attractions">
+                <h2>Top Attractions in Dubai</h2>
+                <div class="attractions-grid">
+                    <!-- Burj Khalifa -->
+                    <div class="attraction-card" data-name="Burj Khalifa">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="burj-khalifa" alt="Burj Khalifa">
+                        <h3>Burj Khalifa</h3>
+                        <p>The world's tallest skyscraper offering stunning views of the city.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Palm Jumeirah -->
+                    <div class="attraction-card" data-name="Palm Jumeirah">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="palm-jumeirah" alt="Palm Jumeirah">
+                        <h3>Palm Jumeirah</h3>
+                        <p>An iconic artificial archipelago known for luxury resorts and stunning views.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Dubai Mall -->
+                    <div class="attraction-card" data-name="Dubai Mall">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="dubai-mall" alt="Dubai Mall">
+                        <h3>Dubai Mall</h3>
+                        <p>A premier shopping destination featuring luxury stores and entertainment.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Jumeirah Beach -->
+                    <div class="attraction-card" data-name="Jumeirah Beach">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="jumeirah-beach" alt="Jumeirah Beach">
+                        <h3>Jumeirah Beach</h3>
+                        <p>A popular beach offering pristine sands and stunning views of the Persian Gulf.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Dubai Marina -->
+                    <div class="attraction-card" data-name="Dubai Marina">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="dubai-marina" alt="Dubai Marina">
+                        <h3>Dubai Marina</h3>
+                        <p>An upscale neighborhood with stunning waterways and high-end dining options.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Desert Safari -->
+                    <div class="attraction-card" data-name="Desert Safari">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="desert-safari" alt="Desert Safari">
+                        <h3>Desert Safari</h3>
+                        <p>An adventurous trip into the desert with dune bashing, camel rides, and cultural performances.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <!-- Review Popup Modal -->
+    <div id="reviewModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Leave a Review for <span id="attraction-name"></span></h2>
+            <form id="review-form">
+                <label for="rating">Rating:</label>
+                <div id="rating-stars">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+                <br>
+                <label for="review-text">Review:</label>
+                <textarea id="review-text" rows="4" cols="50"></textarea>
+                <br>
+                <button type="submit">Submit Review</button>
+            </form>
+            <div id="guidance"></div>
+        </div>
+    </div>
+    
+    <script src="..\destination.js"></script>
+    <script src="..\wishlist_rating.js"></script>
+    <script src="dubai.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wishlist</title>
+    <link rel="stylesheet" href="wishlist.css"> 
+    <link rel="icon" href="airplane.png">
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="back-to-destinations">&larr; Back to Home</a>
+    </header>
+    <main>
+        <h1>My Wishlist</h1>
+        <div class="wishlist-container" id="wishlist-container"></div>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const wishlistContainer = document.getElementById("wishlist-container");
+            const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+            if (wishlist.length === 0) {
+                wishlistContainer.innerHTML = "<p>Your wishlist is empty!</p>";
+                return;
+            }
+
+            wishlist.forEach((destination) => {
+                const card = document.createElement("div");
+                card.classList.add("wishlist-card");
+
+                card.innerHTML = `
+                    <img src="${destination.image}" alt="${destination.name}">
+                    <h3>${destination.name}</h3>
+                    <p>${destination.description}</p>
+                `;
+
+                wishlistContainer.appendChild(card);
+            });
+        });
+    </script>
+</body>
+</html>

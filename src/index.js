@@ -26,9 +26,7 @@ function showError(element, message) {
   }
 }
 
-function redirectToHome() {
-    window.location.href = '../dist/home.html';
-}
+
 
 const signupForm = document.querySelector('.signup');
 if (signupForm) {
@@ -101,6 +99,3 @@ if (loginForm) {
       });
   });
 }
-
-
-

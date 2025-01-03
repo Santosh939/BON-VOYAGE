@@ -12,11 +12,19 @@ body, html {
 .webpage {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/123.jpg);
-    background-position: center;
-    background-size: cover;
+    position: relative;
     overflow: hidden;
 }
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; 
+}
+
 
 .navbar {
     height: 80px;
@@ -169,7 +177,7 @@ li a:hover {
 }
 
 .log-in-form-container {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/123.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(123.jpg);
     background-position: center;
     background-size: cover;
     display: flex;
@@ -320,10 +328,10 @@ a:hover {
     }
 }
 
-.explorediv {
+    .explorediv {
     width: 100%;
     min-height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/123.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(123.jpg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -332,6 +340,7 @@ a:hover {
     overflow-y: auto;
     padding: 50px 20px;
 }
+
 
 .explore{
     padding: 50px 20px;
@@ -361,6 +370,7 @@ a:hover {
     text-align: center;
     align-items: center;
     justify-content: space-between;
+    gap: 50px;
     
     
 }
@@ -384,6 +394,120 @@ a:hover {
 }
 
 .destination-card:hover {
-    transform: scale(1.05)}
+    transform: scale(1.05)} 
+    .add-destination button {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #050505;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .add-destination button:hover {
+        background-color: #070809;
+    }
 
+.content1 {
+    text-align: center;
+    color: white;
+    padding: 150px 20px 50px; 
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), 
+                url(../path/to/your/background-image.jpg) no-repeat center center/cover; }
+ 
 
+.content1 h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+.content1 p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: slideIn 2s forwards 0.5s;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px 20px;
+    background: #f9f9f9;
+}
+
+.about-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card i {
+    color: #ff7f50;
+    margin-bottom: 15px;
+}
+
+.about-card h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.about-card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+    font-size: 14px;
+    border-top: 3px solid #ff7f50;
+}
+
+footer p {
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+    
+    

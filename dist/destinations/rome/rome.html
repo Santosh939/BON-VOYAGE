@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rome</title>
+    <link rel="stylesheet" href="rome.css">
+    <link rel="icon" href="../airplane.png">
+</head>
+<body>
+    <div class="romewebpage">
+        <header>
+            <a href="..\destinations.html" class="back-to-destinations">&larr; Back to Destinations</a>
+        </header>
+        <main>
+            <section class="destination-detail">
+                <h1>Welcome to Rome</h1>
+                <p>Rome, the Eternal City, is a living museum of history, art, and culture. From ancient ruins to Renaissance masterpieces, Rome is a destination where the past meets the present.</p>
+            </section>
+
+            <section class="top-attractions">
+                <h2>Top Attractions in Rome</h2>
+                <div class="attractions-grid">
+                    <!-- Colosseum -->
+                    <div class="attraction-card" data-name="Colosseum">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="colosseum" alt="Colosseum">
+                        <h3>Colosseum</h3>
+                        <p>An ancient amphitheater that hosted gladiatorial contests and public spectacles.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Roman Forum -->
+                    <div class="attraction-card" data-name="Roman Forum">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="roman-forum" alt="Roman Forum">
+                        <h3>Roman Forum</h3>
+                        <p>The heart of ancient Rome, showcasing ruins of temples, basilicas, and public spaces.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Vatican City -->
+                    <div class="attraction-card" data-name="Vatican City">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="vatican-city" alt="Vatican City">
+                        <h3>Vatican City</h3>
+                        <p>The spiritual center of the Catholic Church, home to St. Peter's Basilica and the Sistine Chapel.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Trevi Fountain -->
+                    <div class="attraction-card" data-name="Trevi Fountain">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="trevi-fountain" alt="Trevi Fountain">
+                        <h3>Trevi Fountain</h3>
+                        <p>A Baroque masterpiece and iconic fountain where visitors toss coins to ensure a return to Rome.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Pantheon -->
+                    <div class="attraction-card" data-name="Pantheon">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="pantheon" alt="Pantheon">
+                        <h3>Pantheon</h3>
+                        <p>An ancient temple known for its massive dome and architectural brilliance.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Piazza Navona -->
+                    <div class="attraction-card" data-name="Piazza Navona">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="piazza-navona" alt="Piazza Navona">
+                        <h3>Piazza Navona</h3>
+                        <p>A lively square adorned with fountains, restaurants, and street performers.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Castel Sant'Angelo -->
+                    <div class="attraction-card" data-name="Castel Sant'Angelo">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="castel-sant-angelo" alt="Castel Sant'Angelo">
+                        <h3>Castel Sant'Angelo</h3>
+                        <p>A historic fortress originally built as a mausoleum for Emperor Hadrian.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Spanish Steps -->
+                    <div class="attraction-card" data-name="Spanish Steps">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="spanish-steps" alt="Spanish Steps">
+                        <h3>Spanish Steps</h3>
+                        <p>A monumental staircase offering stunning views and access to Trinità dei Monti church.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <!-- Review Popup Modal -->
+    <div id="reviewModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Leave a Review for <span id="attraction-name"></span></h2>
+            <form id="review-form">
+                <label for="rating">Rating:</label>
+                <div id="rating-stars">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+                <br>
+                <label for="review-text">Review:</label>
+                <textarea id="review-text" rows="4" cols="50"></textarea>
+                <br>
+                <button type="submit">Submit Review</button>
+            </form>
+            <div id="guidance"></div>
+        </div>
+    </div>
+    
+    <script src="..\destination.js"></script>
+    <script src="..\wishlist_rating.js"></script>
+    <script src="rome.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singapore</title>
+    <link rel="stylesheet" href="singapore.css">
+    <link rel="icon" href="../airplane.png">
+</head>
+<body>
+    <div class="singaporewebpage">
+        <header>
+            <a href="..\destinations.html" class="back-to-destinations">&larr; Back to Destinations</a>
+        </header>
+        <main>
+            <section class="destination-detail">
+                <h1>Welcome to Singapore</h1>
+                <p>Singapore, the Lion City, is a vibrant metropolis known for its rich culture, modern skyline, and lush greenery. From world-class attractions to culinary delights, Singapore offers an unforgettable experience.</p>
+            </section>
+
+            <section class="top-attractions">
+                <h2>Top Attractions in Singapore</h2>
+                <div class="attractions-grid">
+                    <!-- Marina Bay Sands -->
+                    <div class="attraction-card" data-name="Marina Bay Sands">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="marina-bay-sands" alt="Marina Bay Sands">
+                        <h3>Marina Bay Sands</h3>
+                        <p>A luxurious resort with an iconic rooftop infinity pool offering stunning city views.</p>
+                        <div class="rating"></div>
+                    </div>
+                    <!-- Gardens by the Bay -->
+                    <div class="attraction-card" data-name="Gardens by the Bay">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="gardens-by-the-bay" alt="Gardens by the Bay">
+                        <h3>Gardens by the Bay</h3>
+                        <p>A futuristic garden with towering Supertrees and breathtaking floral displays.</p>
+                        <div class="rating"></div>
+                    </div>
+                    <!-- Sentosa Island -->
+                    <div class="attraction-card" data-name="Sentosa Island">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="sentosa-island" alt="Sentosa Island">
+                        <h3>Sentosa Island</h3>
+                        <p>A tropical island getaway featuring beaches, Universal Studios, and adventure parks.</p>
+                        <div class="rating"></div>
+                    </div>
+                    <!-- Orchard Road -->
+                    <div class="attraction-card" data-name="Orchard Road">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="orchard-road" alt="Orchard Road">
+                        <h3>Orchard Road</h3>
+                        <p>A shopper's paradise lined with high-end boutiques, malls, and dining options.</p>
+                        <div class="rating"></div>
+                    </div>
+                    <!-- Chinatown -->
+                    <div class="attraction-card" data-name="Chinatown">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="chinatown" alt="Chinatown">
+                        <h3>Chinatown</h3>
+                        <p>A historic district offering vibrant markets, temples, and delicious street food.</p>
+                        <div class="rating"></div>
+                    </div>
+                    <!-- Clarke Quay -->
+                    <div class="attraction-card" data-name="Clarke Quay">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="clarke-quay" alt="Clarke Quay">
+                        <h3>Clarke Quay</h3>
+                        <p>A riverside destination bustling with nightlife, restaurants, and live music.</p>
+                        <div class="rating"></div>
+                    </div>
+                    <!-- Singapore Zoo -->
+                    <div class="attraction-card" data-name="Singapore Zoo">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="singapore-zoo" alt="Singapore Zoo">
+                        <h3>Singapore Zoo</h3>
+                        <p>A world-renowned zoo offering immersive wildlife experiences in naturalistic habitats.</p>
+                        <div class="rating"></div>
+                    </div>
+                    <!-- Merlion Park -->
+                    <div class="attraction-card" data-name="Merlion Park">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="merlion-park" alt="Merlion Park">
+                        <h3>Merlion Park</h3>
+                        <p>Home to Singapore's iconic Merlion statue, a symbol of the city's heritage.</p>
+                        <div class="rating"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <!-- Review Popup Modal -->
+    <div id="reviewModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Leave a Review for <span id="attraction-name"></span></h2>
+            <form id="review-form">
+                <label for="rating">Rating:</label>
+                <div id="rating-stars">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+                <br>
+                <label for="review-text">Review:</label>
+                <textarea id="review-text" rows="4" cols="50"></textarea>
+                <br>
+                <button type="submit">Submit Review</button>
+            </form>
+            <div id="guidance"></div>
+        </div>
+    </div>
+
+    <script src="..\destination.js"></script>
+    <script src="..\wishlist_rating.js"></script>
+    <script src="singapore.js"></script>
+</body>
+</html>

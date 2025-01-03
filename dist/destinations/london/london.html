@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>London</title>
+    <link rel="stylesheet" href="london.css">
+    <link rel="icon" href="../airplane.png">
+</head>
+<body>
+    <div class="londonwebpage">
+        <header>
+            <a href="..\destinations.html" class="back-to-destinations">&larr; Back to Destinations</a>
+        </header>
+        <main>
+            <section class="destination-detail">
+                <h1>Welcome to London</h1>
+                <p>London, the capital city of England, is a vibrant metropolis full of history, culture, and modern attractions. Explore its iconic landmarks, scenic parks, and rich heritage.</p>
+            </section>
+
+            <section class="top-attractions">
+                <h2>Top Attractions in London</h2>
+                <div class="attractions-grid">
+                    <!-- Tower of London -->
+                    <div class="attraction-card" data-name="Tower of London">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="tower-of-london" alt="Tower of London">
+                        <h3>Tower of London</h3>
+                        <p>A historic fortress and former royal residence, now home to the Crown Jewels.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Buckingham Palace -->
+                    <div class="attraction-card" data-name="Buckingham Palace">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="buckingham-palace" alt="Buckingham Palace">
+                        <h3>Buckingham Palace</h3>
+                        <p>The residence of the British monarch, offering a glimpse into royal life.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- London Eye -->
+                    <div class="attraction-card" data-name="London Eye">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="london-eye" alt="London Eye">
+                        <h3>London Eye</h3>
+                        <p>A giant Ferris wheel on the South Bank of the River Thames offering stunning city views.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Hyde Park -->
+                    <div class="attraction-card" data-name="Hyde Park">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="hyde-park" alt="Hyde Park">
+                        <h3>Hyde Park</h3>
+                        <p>A vast and scenic park offering gardens, lakes, and recreational activities.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Brighton Beach -->
+                    <div class="attraction-card" data-name="Brighton Beach">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="brighton-beach" alt="Brighton Beach">
+                        <h3>Brighton Beach</h3>
+                        <p>A lively seaside destination known for its pier, shops, and vibrant atmosphere.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Camden Market -->
+                    <div class="attraction-card" data-name="Camden Market">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="camden-market" alt="Camden Market">
+                        <h3>Camden Market</h3>
+                        <p>A bustling market offering eclectic shops, street food, and vibrant culture.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <!-- Review Popup Modal -->
+    <div id="reviewModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Leave a Review for <span id="attraction-name"></span></h2>
+            <form id="review-form">
+                <label for="rating">Rating:</label>
+                <div id="rating-stars">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+                <br>
+                <label for="review-text">Review:</label>
+                <textarea id="review-text" rows="4" cols="50"></textarea>
+                <br>
+                <button type="submit">Submit Review</button>
+            </form>
+            <div id="guidance"></div>
+        </div>
+    </div>
+    
+    <script src="..\destination.js"></script>
+    <script src="..\wishlist_rating.js"></script>
+    <script src="london.js"></script>
+</body>
+</html>

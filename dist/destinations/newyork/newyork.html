@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New York</title>
+    <link rel="stylesheet" href="newyork.css"> 
+    <link rel="icon" href="../airplane.png">
+</head>
+<body>
+    <div class="newyorkwebpage">
+        <header>
+            <a href="..\destinations.html" class="back-to-destinations">&larr; Back to Destinations</a>
+        </header>
+        <main>
+            <section class="destination-detail">
+                <h1>Welcome to New York</h1>
+                <p>New York City, the city that never sleeps, is a global hub of culture, art, and commerce. From the iconic Statue of Liberty to the bustling streets of Times Square, New York offers unforgettable experiences.</p>
+            </section>
+
+            <section class="top-attractions">
+                <h2>Top Attractions in New York</h2>
+                <div class="attractions-grid">
+                    <!-- Statue of Liberty -->
+                    <div class="attraction-card" data-name="Statue of Liberty">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="statue-of-liberty" alt="Statue of Liberty">
+                        <h3>Statue of Liberty</h3>
+                        <p>An enduring symbol of freedom and democracy located on Liberty Island.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Times Square -->
+                    <div class="attraction-card" data-name="Times Square">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="times-square" alt="Times Square">
+                        <h3>Times Square</h3>
+                        <p>A vibrant and bustling intersection known for its theaters, lights, and energy.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Central Park -->
+                    <div class="attraction-card" data-name="Central Park">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="central-park" alt="Central Park">
+                        <h3>Central Park</h3>
+                        <p>An urban oasis offering scenic views, walking paths, and cultural landmarks.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Empire State Building -->
+                    <div class="attraction-card" data-name="Empire State Building">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="empire-state-building" alt="Empire State Building">
+                        <h3>Empire State Building</h3>
+                        <p>A landmark skyscraper offering panoramic views of the city from its observation deck.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Brooklyn Bridge -->
+                    <div class="attraction-card" data-name="Brooklyn Bridge">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="brooklyn-bridge" alt="Brooklyn Bridge">
+                        <h3>Brooklyn Bridge</h3>
+                        <p>A historic bridge offering scenic views of Manhattan and Brooklyn.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Broadway -->
+                    <div class="attraction-card" data-name="Broadway">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="broadway" alt="Broadway">
+                        <h3>Broadway</h3>
+                        <p>Experience the magic of live theater in the heart of Manhattan's theater district.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <!-- Review Popup Modal -->
+    <div id="reviewModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Leave a Review for <span id="attraction-name"></span></h2>
+            <form id="review-form">
+                <label for="rating">Rating:</label>
+                <div id="rating-stars">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+                <br>
+                <label for="review-text">Review:</label>
+                <textarea id="review-text" rows="4" cols="50"></textarea>
+                <br>
+                <button type="submit">Submit Review</button>
+            </form>
+            <div id="guidance"></div>
+        </div>
+    </div>
+    
+    <script src="..\destination.js"></script>
+    <script src="..\wishlist_rating.js"></script>
+    <script src="newyork.js"></script>
+</body>
+</html>

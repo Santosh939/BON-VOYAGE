@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Destination</title>
+    <link rel="stylesheet" href="add.css">
+    <link rel="icon" href="../airplane.png">
+</head>
+<body>
+    <div class="theme-dark">
+        <div class="back-home">
+            <a href="../index.html" class="home-link">← Back to Home</a>
+        </div>
+        <div class="newDiv">
+            <form onsubmit="addDestination(event)" class="newForm needs-validation" novalidate>
+                <h2>Add a New Destination</h2>
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="title" placeholder="Add a catchy title" required>
+                    <div class="invalid-feedback">Please add a valid title!</div>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea id="description" class="form-control" rows="3" placeholder="Please add a description" required></textarea>
+                    <div class="invalid-feedback">Please enter a short description</div>
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Image</label>
+                    <input type="file" id="image" class="form-control" accept="image/*" required>
+                </div>
+                <div class="mb-3">
+                    <label for="destination" class="form-label">Destination Path</label>
+                    <input type="text" id="destination" class="form-control" placeholder="Destination URL (e.g., paris/paris.html)" required>
+                    <div class="invalid-feedback">Please add a valid destination path</div>
+                </div>
+                <button type="submit" class="btn btn-outline-danger mb-3">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function addDestination(event) {
+            event.preventDefault();
+
+            const title = document.getElementById("title").value;
+            const description = document.getElementById("description").value;
+            const fileInput = document.getElementById("image").files[0];
+            const destination = document.getElementById("destination").value;
+
+            if (!title || !description || !fileInput || !destination) {
+                alert("Please fill in all required fields.");
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const newDestination = {
+                    title,
+                    description,
+                    image: e.target.result, // Base64 image data
+                    destination,
+                };
+
+                const destinations = JSON.parse(localStorage.getItem("destinations")) || [];
+                destinations.push(newDestination);
+                localStorage.setItem("destinations", JSON.stringify(destinations));
+
+                alert("Destination added successfully!");
+                window.location.href = "../destinations/destinations.html";
+            };
+
+            reader.readAsDataURL(fileInput);
+        }
+    </script>
+</body>
+</html>

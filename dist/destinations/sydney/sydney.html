@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sydney</title>
+    <link rel="stylesheet" href="sydney.css">
+    <link rel="icon" href="../airplane.png">
+</head>
+<body>
+    <div class="sydneywebpage">
+        <header>
+            <a href="..\destinations.html" class="back-to-destinations">&larr; Back to Destinations</a>
+        </header>
+        <main>
+            <section class="destination-detail">
+                <h1>Welcome to Sydney</h1>
+                <p>Sydney, the vibrant harbor city, is renowned for its iconic landmarks, pristine beaches, and rich cultural heritage. From the iconic Sydney Opera House to its stunning coastline, Sydney offers an unforgettable experience for every traveler.</p>
+            </section>
+
+            <section class="top-attractions">
+                <h2>Top Attractions in Sydney</h2>
+                <div class="attractions-grid">
+                    <!-- Sydney Opera House -->
+                    <div class="attraction-card" data-name="Sydney Opera House">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="sydney-opera-house" alt="Sydney Opera House">
+                        <h3>Sydney Opera House</h3>
+                        <p>An architectural and cultural icon of Australia, located on the picturesque Sydney Harbour.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Bondi Beach -->
+                    <div class="attraction-card" data-name="Bondi Beach">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="bondi-beach" alt="Bondi Beach">
+                        <h3>Bondi Beach</h3>
+                        <p>A world-famous beach known for its golden sand, great surf, and vibrant beachside atmosphere.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Manly Beach -->
+                    <div class="attraction-card" data-name="Manly Beach">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="manly-beach" alt="Manly Beach">
+                        <h3>Manly Beach</h3>
+                        <p>Accessible via a scenic ferry ride, Manly Beach offers a relaxed atmosphere and excellent surf.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Sydney Harbour Bridge -->
+                    <div class="attraction-card" data-name="Sydney Harbour Bridge">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="sydney-harbour-bridge" alt="Sydney Harbour Bridge">
+                        <h3>Sydney Harbour Bridge</h3>
+                        <p>An iconic steel arch bridge offering BridgeClimb tours for panoramic views of the harbor.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Taronga Zoo -->
+                    <div class="attraction-card" data-name="Taronga Zoo">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="taronga-zoo" alt="Taronga Zoo">
+                        <h3>Taronga Zoo</h3>
+                        <p>Home to exotic wildlife with breathtaking views of Sydney Harbour.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Blue Mountains -->
+                    <div class="attraction-card" data-name="Blue Mountains">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="blue-mountains" alt="Blue Mountains">
+                        <h3>Blue Mountains</h3>
+                        <p>A UNESCO World Heritage Site known for dramatic cliffs, waterfalls, and eucalyptus forests.</p>
+                    
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <!-- Review Popup Modal -->
+    <div id="reviewModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Leave a Review for <span id="attraction-name"></span></h2>
+            <form id="review-form">
+                <label for="rating">Rating:</label>
+                <div id="rating-stars">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+                <br>
+                <label for="review-text">Review:</label>
+                <textarea id="review-text" rows="4" cols="50"></textarea>
+                <br>
+                <button type="submit">Submit Review</button>
+            </form>
+            <div id="guidance"></div>
+        </div>
+    </div>
+    
+    <script src="..\destination.js"></script>
+    <script src="..\wishlist_rating.js"></script>
+    <script src="sydney.js"></script>
+</body>
+</html>

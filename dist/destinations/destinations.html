@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations</title>
+    <link rel="stylesheet" href="..\style.css">  
+    <link rel="icon" href="../airplane.png"> 
+</head>
+<body>
+<main>  
+  <div class="explorediv">
+    <a href="..\index.html" class="back-to-home">&larr; Back to Home</a>
+    <section id="destination-list" class="explore">
+        <h1 class="fade-in">Explore Our Top Destinations</h1>
+        <div class="destinations-grid">
+            <div class="destination-card" data-destination="paris">
+                <img id="paris-image" alt="Paris" onclick="navigateToDestination('paris/paris.html')">
+                <h3>Paris</h3>
+                <p>The city of light and love awaits you.</p>
+            </div>
+            <div class="destination-card" data-destination="tokyo">
+                <img id="tokyo-image" alt="Tokyo" onclick="navigateToDestination('tokyo/tokyo.html')">
+                <h3>Tokyo</h3>
+                <p>Discover the vibrant culture of Japan.</p>
+            </div>
+            <div class="destination-card" data-destination="newyork">
+                <img id="newyork-image" alt="New York" onclick="navigateToDestination('newyork/newyork.html')">
+                <h3>New York</h3>
+                <p>The city that never sleeps is calling.</p>
+            </div>
+            <div class="destination-card" data-destination="sydney">
+                <img id="sydney-image" alt="Sydney" onclick="navigateToDestination('sydney/sydney.html')">
+                <h3>Sydney</h3>
+                <p>Experience the stunning harbor and beaches.</p>
+            </div>
+            <div class="destination-card" data-destination="rome">
+                <img id="rome-image" alt="Rome" onclick="navigateToDestination('rome/rome.html')">
+                <h3>Rome</h3>
+                <p>Explore ancient history and breathtaking architecture.</p>
+            </div>
+            <div class="destination-card" data-destination="london">
+                <img id="london-image" alt="London" onclick="navigateToDestination('london/london.html')">
+                <h3>London</h3>
+                <p>Experience the charm of this iconic city.</p>
+            </div>
+            <div class="destination-card" data-destination="dubai">
+                <img id="dubai-image" alt="Dubai" onclick="navigateToDestination('dubai/dubai.html')">
+                <h3>Dubai</h3>
+                <p>Discover luxury and futuristic architecture.</p>
+            </div>
+            <div class="destination-card" data-destination="bali">
+                <img id="bali-image" alt="Bali" onclick="navigateToDestination('bali/bali.html')">
+                <h3>Bali</h3>
+                <p>Relax in paradise with stunning beaches and culture.</p>
+            </div>
+            <div class="destination-card" data-destination="cairo">
+                <img id="cairo-image" alt="Cairo" onclick="navigateToDestination('cairo/cairo.html')">
+                <h3>Cairo</h3>
+                <p>Step back in time with the pyramids and rich history.</p>
+            </div>
+            <div class="destination-card" data-destination="singapore">
+                <img id="singapore-image" alt="Singapore" onclick="navigateToDestination('singapore/singapore.html')">
+                <h3>Singapore</h3>
+                <p>Enjoy a blend of modernity and lush greenery.</p>
+            </div>
+            <button id="add-destination-btn" onclick="navigateToDestination('../adding-destination/add.html')">Add Destination</button>
+    <section id="destination-list" class="explore">
+        <div class="destinations-grid">
+        </div>
+    </section>
+  </div>
+</main>
+<script>
+function navigateToDestination(page) {
+    window.location.href = page;
+}
+document.addEventListener("DOMContentLoaded", function () {
+    const destinationList = document.querySelector(".destinations-grid");
+    const destinations = JSON.parse(localStorage.getItem("destinations")) || [];
+
+    destinations.forEach(dest => {
+        const card = document.createElement("div");
+        card.className = "destination-card";
+
+        card.innerHTML = `
+            <img src="${dest.image}" alt="${dest.title}" onclick="navigateToDestination('${dest.destination}')">
+            <h3>${dest.title}</h3>
+            <p>${dest.description}</p>
+        `;
+
+        destinationList.appendChild(card);
+    });
+});
+</script>
+<script src="destination.js"></script>
+<script src="../bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paris</title>
+    <link rel="stylesheet" href="paris.css"> 
+    <link rel="icon" href="../airplane.png">
+</head>
+<body>
+    <div class="pariswebpage">
+        <header>
+            <a href="..\destinations.html" class="back-to-destinations">&larr; Back to Destinations</a>
+        </header>
+        <main>
+            <section class="destination-detail">
+                <h1>Welcome to Paris</h1>
+                <p>Paris, the city of light and love, offers stunning architecture, world-renowned cuisine, and rich history. Explore the Eiffel Tower, stroll along the Seine River, and experience the charm of this iconic destination.</p>
+            </section>
+
+            <section class="top-attractions">
+                <h2>Top Attractions in Paris</h2>
+                <div class="attractions-grid">
+                    <!-- Eiffel Tower -->
+                    <div class="attraction-card" data-name="Eiffel Tower">
+                        <span class="love-symbol">&#9829;</span>
+                        <img src="tower.jpg" alt="Eiffel Tower">
+                        <h3>Eiffel Tower</h3>
+                        <p>The iconic symbol of Paris, offering stunning city views from its observation decks.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Louvre Museum -->
+                    <div class="attraction-card" data-name="Louvre Museum">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="louvre-museum" alt="Louvre Museum">
+                        <h3>Louvre Museum</h3>
+                        <p>Home to the famous Mona Lisa, this museum is a treasure trove of art and history.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Notre-Dame Cathedral -->
+                    <div class="attraction-card" data-name="Notre-Dame Cathedral">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="notre-dame" alt="Notre-Dame Cathedral">
+                        <h3>Notre-Dame Cathedral</h3>
+                        <p>A masterpiece of Gothic architecture, known for its stunning rose windows.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Montmartre -->
+                    <div class="attraction-card" data-name="Montmartre">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="montmartre" alt="Montmartre">
+                        <h3>Montmartre</h3>
+                        <p>An artistic neighborhood with a bohemian charm and breathtaking views of the city.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Seine River Cruise -->
+                    <div class="attraction-card" data-name="Seine River Cruise">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="seine-cruise" alt="Seine River Cruise">
+                        <h3>Seine River Cruise</h3>
+                        <p>Relax on a scenic cruise and see Paris landmarks from the water.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Palace of Versailles -->
+                    <div class="attraction-card" data-name="Palace of Versailles">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="versailles" alt="Palace of Versailles">
+                        <h3>Palace of Versailles</h3>
+                        <p>A symbol of royal opulence, featuring stunning gardens and lavish interiors.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <!-- Review Popup Modal -->
+    <div id="reviewModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Leave a Review for <span id="attraction-name"></span></h2>
+            <form id="review-form">
+                <label for="rating">Rating:</label>
+                <div id="rating-stars">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+                <br>
+                <label for="review-text">Review:</label>
+                <textarea id="review-text" rows="4" cols="50"></textarea>
+                <br>
+                <button type="submit">Submit Review</button>
+            </form>
+            <div id="guidance"></div>
+        </div>
+    </div>
+    
+    
+</body><script src="..\destination.js"></script>
+    <script src="..\wishlist_rating.js"></script>
+    <script src="paris.js"></script>
+</html>

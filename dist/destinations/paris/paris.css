@@ -1,0 +1,216 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+.pariswebpage {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(tower.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 20px;
+}
+
+header {
+    
+    padding: 15px 20px;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/* Destination Detail Section */
+.destination-detail {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+    
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.destination-detail h1 {
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.destination-detail p {
+    font-size: 1.2em;
+    color: #fff;
+}
+
+/* Top Attractions Section */
+.top-attractions {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.top-attractions h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+/* Attraction Cards */
+.attractions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.attraction-card {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #fff;
+    transition: transform 0.2s;
+}
+
+.attraction-card:hover {
+    transform: scale(1.05);
+}
+
+.attraction-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.love-symbol {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #fff; /* White before clicking */
+    cursor: pointer;
+    user-select: none;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for visibility */
+    transition: color 0.3s ease;
+}
+
+.love-symbol.active {
+    color: #ff0000; /* Red after clicking */
+}
+.rating {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.star {
+    font-size: 24px;
+    color: #ddd; /* Default star color */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.star:hover,
+.star:hover ~ .star {
+    color: #ffc107; /* Highlight color on hover */
+}
+
+.star.selected,
+.star.selected ~ .star {
+    color: #ffc107; /* Highlight selected stars */
+}
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Rating stars */
+#rating-stars {
+    font-size: 24px;
+}
+
+.star {
+    cursor: pointer;
+    color: #ddd;
+}
+
+.star:hover,
+.star.selected {
+    color: #ffc107;
+}
+
+/* Form */
+#review-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#review-form textarea {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#review-form button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#review-form button:hover {
+    background-color: #0056b3;
+}
+
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cairo</title>
+    <link rel="stylesheet" href="cairo.css">
+    <link rel="icon" href="../airplane.png">
+</head>
+<body>
+    <div class="cairowebpage">
+        <header>
+            <a href="..\destinations.html" class="back-to-destinations">&larr; Back to Destinations</a>
+        </header>
+        <main>
+            <section class="destination-detail">
+                <h1>Welcome to Cairo</h1>
+                <p>Cairo, the vibrant capital of Egypt, is a city steeped in history and culture, offering awe-inspiring landmarks and bustling bazaars.</p>
+            </section>
+
+            <section class="top-attractions">
+                <h2>Top Attractions in Cairo</h2>
+                <div class="attractions-grid">
+                    <!-- Pyramids of Giza -->
+                    <div class="attraction-card" data-name="Pyramids of Giza">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="pyramids-of-giza" alt="Pyramids of Giza">
+                        <h3>Pyramids of Giza</h3>
+                        <p>One of the Seven Wonders of the Ancient World, a must-visit in Cairo.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Egyptian Museum -->
+                    <div class="attraction-card" data-name="Egyptian Museum">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="egyptian-museum" alt="Egyptian Museum">
+                        <h3>Egyptian Museum</h3>
+                        <p>A treasure trove of ancient Egyptian artifacts and mummies.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Khan El Khalili -->
+                    <div class="attraction-card" data-name="Khan El Khalili">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="khan-el-khalili" alt="Khan El Khalili">
+                        <h3>Khan El Khalili</h3>
+                        <p>A bustling market offering traditional crafts and souvenirs.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Al-Azhar Mosque -->
+                    <div class="attraction-card" data-name="Al-Azhar Mosque">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="al-azhar-mosque" alt="Al-Azhar Mosque">
+                        <h3>Al-Azhar Mosque</h3>
+                        <p>A stunning mosque and one of the oldest universities in the world.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                    <!-- Coptic Cairo -->
+                    <div class="attraction-card" data-name="Coptic Cairo">
+                        <span class="love-symbol">&#9829;</span>
+                        <img id="coptic-cairo" alt="Coptic Cairo">
+                        <h3>Coptic Cairo</h3>
+                        <p>A historic area with ancient churches and the Hanging Church.</p>
+                        <div class="rating">
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <!-- Review Popup Modal -->
+    <div id="reviewModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Leave a Review for <span id="attraction-name"></span></h2>
+            <form id="review-form">
+                <label for="rating">Rating:</label>
+                <div id="rating-stars">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+                <br>
+                <label for="review-text">Review:</label>
+                <textarea id="review-text" rows="4" cols="50"></textarea>
+                <br>
+                <button type="submit">Submit Review</button>
+            </form>
+            <div id="guidance"></div>
+        </div>
+    </div>
+    
+    <script src="..\destination.js"></script>
+    <script src="..\wishlist_rating.js"></script>
+    <script src="cairo.js"></script>
+</body>
+</html>
